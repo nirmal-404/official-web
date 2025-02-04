@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button"
 // Sample upcoming events
 const events = [
   {
-    title: "Web Development Workshop",
-    date: "June 15, 2024",
-    description: "Learn modern web development techniques with React and Next.js",
-    location: "SLIIT - Main Auditorium",
-    time: "9:00 AM - 12:00 PM",
+    title: "Code N' Coffee Podcast",
+    date: "Ongoing LIVE on YouTube",
+    description: "Code N' Coffee, is a series of byte-sized tech content aimed at Computer Science students presented to you by The Mozilla Campus Club of SLIIT. Don't miss out on the Tech insights and the latest of the tech and privacy world.",
+    location: "Youtube - @sliitmozilla",
+    time: "Every Week",
   },
   {
     title: "Open Source Contribution Day",
@@ -17,34 +17,40 @@ const events = [
     location: "SLIIT - Computer Labs",
     time: "10:00 AM - 4:00 PM",
   },
-  {
+  /*{
     title: "Tech Talk: Future of Web",
     date: "July 15, 2024",
     description: "Industry experts discuss the future of web technologies",
     location: "SLIIT - Conference Hall",
     time: "2:00 PM - 4:00 PM",
-  },
+  },*/
 ]
 
 // Sample past events data
 const pastEvents = [
   {
-    title: "Mozilla Meetup",
+    title: "Bashaway 2024",
     image: "/assets/past-event-1.jpg",
     description:
-      "A friendly meetup where members showcased their open source contributions and participated in a live Q&A session.",
+      "Bashaway is a Inter-University Scripting competition organized by the SLIIT FOSS Community in collaboration with Mozilla Campus Club of SLIIT, SLIIT Women in FOSS, and Software Engineering Student Community.",
   },
   {
-    title: "Hackathon 2023",
+    title: "Intro to Assemby Programming",
     image: "/assets/past-event-2.jpg",
     description:
-      "Intense 24-hour coding event where teams built innovative solutions for real-world challenges.",
+      "The 3rd live tech session conducted by Seniru Pasan. Dive into the world of low-level programming! Exploring the fundamentals that power your devices, demystifying how software speaks to hardware.",
   },
   {
-    title: "Tech Webinar Series",
+    title: "Utilizing AntDesign for quick UI Development",
     image: "/assets/past-event-3.jpg",
     description:
-      "A series of online webinars covering emerging technologies like WebXR, PWAs, and Rust.",
+      "The 2nd live tech session conducted by Russell Peiris. A session focusing on frontend and building clean and neat UIs",
+  },
+  {
+    title: "Intro to Swift & SwiftUI",
+    image: "/assets/past-event-3.jpg",
+    description:
+      "The 1st live tech session conducted by Nowen Kottage. Dive into iOS Development with the Introduction to Swift & SwiftUI: A sneak peek into UIKit!",
   },
 ]
 

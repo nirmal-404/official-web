@@ -8,11 +8,10 @@ export default function Home() {
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">Mission-driven. People-powered.</h1>
-          <p className="text-xl opacity-90">Official Website of The Mozilla Campus Club of SLIIT</p>
+          <p className="text-xl opacity-90">Home of The Mozilla Campus Club of SLIIT</p>
         </div>
       </section>
       
-      <MovingBanner text="Join Mozilla Campus Club SLIIT - Where Innovation Meets Open Source 🚀" />
       
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Areas of Focus</h2>
@@ -24,7 +23,7 @@ export default function Home() {
                           cursor-pointer"
           >
             <Code2 className="h-12 w-12 mx-auto mb-4 stroke-orange-600" />
-            <h3 className="text-orange-600 font-bold mb-2">Web Technologies</h3>
+            <h3 className="text-orange-600 font-bold mb-2">Build The Web</h3>
             <p className="text-gray-600">Explore modern web development and open standards</p>
           </div>
 
@@ -76,7 +75,6 @@ export default function Home() {
                 cursor-pointer
               "
             >
-              {/* Asterisk / star aligned left */}
               <span className="text-orange-600 text-2xl block text-left mb-2">⁕</span>
               <h3 className="text-orange-600 font-bold mb-2">Skill Development</h3>
               <p className="text-gray-600">
@@ -84,7 +82,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Card 2 */}
             <div
               className="
                 bg-white p-6 rounded-lg shadow-sm 
@@ -100,7 +97,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Card 3 */}
             <div
               className="
                 bg-white p-6 rounded-lg shadow-sm 
@@ -121,21 +117,21 @@ export default function Home() {
 
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-orange-400">Quote of the Day</h2>
+          <h2 className="text-3xl font-bold mb-4 text-orange-400">Mozilla's legacy</h2>
           <blockquote className="text-xl italic mb-4">
             "The web is not a platform. It's an ocean of possibilities."
           </blockquote>
-          <p className="font-semibold">- Mozilla Community</p>
+          <p className="font-semibold">- The Mozilla Community</p>
         </div>
       </section>
 
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Join Us</h2>
+          <h2 className="text-3xl font-bold mb-6">Become a member</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Be part of a community that's passionate about technology, innovation, and making a difference.
+            Be part of a community that's passionate about technology, innovation, and making a difference in internet security.
           </p>
-          <Button size="lg">Join #sliitMozilla</Button>
+          <Button size="lg">Join Us!</Button>
         </div>
       </section>
     </div>
