@@ -22,14 +22,12 @@ export function MovingBanner({ text }: MovingBannerProps) {
 
     let progress = 0
     // The maximum speed (pixels per frame) when not hovered.
-    // Adjust this to taste!
     const MAX_SPEED = 1.25
 
-    // We'll store the current speed and "ease" it in/out.
     let currentSpeed = 0
 
     function animate() {
-      // Set target speed based on whether or not we are paused (hovering).
+      // Set target speed based on hovering
       const targetSpeed = pausedRef.current ? 0 : MAX_SPEED
 
       // Gradually approach targetSpeed (a simple "ease" factor of 0.1).
@@ -56,7 +54,6 @@ export function MovingBanner({ text }: MovingBannerProps) {
     return () => cancelAnimationFrame(animationId)
   }, [])
 
-  // Example messages
   const messages = [
     "Join Mozilla Campus Club SLIIT - Where Innovation Meets Open Source",
     "Code N' Coffee Podcast NOW LIVE on YouTube!",

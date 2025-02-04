@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
-// Sample upcoming events
+// upcoming events
 const events = [
   {
     title: "Code N' Coffee Podcast",
@@ -26,7 +26,7 @@ const events = [
   },*/
 ]
 
-// Sample past events data
+// past events data
 const pastEvents = [
   {
     title: "Bashaway 2024",

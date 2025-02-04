@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react"
 
 /**
- * Scenes / states (now 8 total):
+ * Scenes / states:
  *
  * 1) Running Fox (right -> left)
  * 2) Blank (3s delay)

@@ -6,9 +6,7 @@ export function Footer() {
     <footer className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Footer column 1 */}
           <div>
-            {/* Logo Image */}
             <img
               src="/assets/Mozilla-logo.png"
               alt="Mozilla Logo"
@@ -20,7 +18,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Footer column 2 */}
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <div className="flex flex-col space-y-2">
@@ -42,7 +39,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Footer column 3 */}
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="text-sm space-y-2">
@@ -53,7 +49,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Footer column 4 */}
           <div>
             <h4 className="font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">

@@ -9,13 +9,13 @@ export function SplashScreen({ children }: { children: React.ReactNode }) {
     // Simulate a short delay or wait for hydration
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 1500) // 1.5s or however long you want
+    }, 1500) // 1.5s
 
     return () => clearTimeout(timer)
   }, [])
 
   if (isLoading) {
-    // Show your custom loading screen
+    // Show loading screen
     return (
       <div className="fixed inset-0 flex flex-col items-center justify-center bg-black text-white z-[999999]">
         <h2 className="text-xl font-semibold mb-4">Loading...</h2>
@@ -28,6 +28,5 @@ export function SplashScreen({ children }: { children: React.ReactNode }) {
     )
   }
 
-  // If not loading, render children (the actual app)
   return <>{children}</>
 }
