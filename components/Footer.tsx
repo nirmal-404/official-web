@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Github, Linkedin } from "lucide-react"
+import { Facebook, Twitter, Instagram, Github, Linkedin, Youtube } from "lucide-react"
 
 export function Footer() {
   return (
@@ -15,6 +15,7 @@ export function Footer() {
             <h3 className="font-bold mb-4">Mozilla Campus Club of SLIIT</h3>
             <p className="text-sm text-gray-600">
               Empowering students through open source technology and innovation.
+              <br/><b>#welovetech!</b> 🦊❤️
             </p>
           </div>
 
@@ -45,26 +46,29 @@ export function Footer() {
               <p>SLIIT Malabe Campus</p>
               <p>New Kandy Road</p>
               <p>Malabe, Sri Lanka</p>
-              <p>Email: mozilla@sliit.lk</p>
+              <p>Email: infosliitmcc@gmail.com</p>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Follow Us</h4>
+            <h4 className="font-semibold mb-4">Follow Us on Socials!</h4>
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-primary">
+              <Link href="https://www.facebook.com/sliitmcc" className="hover:text-primary">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="hover:text-primary">
+              {/* <Link href="#" className="hover:text-primary">
                 <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="hover:text-primary">
+              </Link> */}
+              <Link href="https://www.instagram.com/sliitmozilla" className="hover:text-primary">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="hover:text-primary">
+              <Link href="https://github.com/sliitmozilla" className="hover:text-primary">
                 <Github className="h-5 w-5" />
               </Link>
-              <Link href="#" className="hover:text-primary">
+              <Link href="https://www.youtube.com/@sliitmozilla" className="hover:text-primary">
+                <Youtube className="h-5 w-5" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/sliitmozilla/" className="hover:text-primary">
                 <Linkedin className="h-5 w-5" />
               </Link>
             </div>

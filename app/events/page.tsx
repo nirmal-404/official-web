@@ -12,14 +12,21 @@ const events = [
   },
   {
     title: "Open Source Contribution Day",
-    date: "July 1, 2024",
-    description: "Join us for a day of contributing to open source projects",
-    location: "SLIIT - Computer Labs",
-    time: "10:00 AM - 4:00 PM",
+    date: "TBD",
+    description: "Join us for a day of contributing to open source projects to celebrate the wonder and beauty of Open-Source Software on Open Source Contribution Day!",
+    location: "TBD",
+    time: "TBD",
+  },
+  {
+    title: "Hola Mozilla!",
+    date: "April 2025",
+    description: "Hola Mozilla is the Orientation program for the Mozilla Campus Club of SLIIT. This event is specially focused on the new members of the club to get to know about the club and its activities.",
+    location: "TBD",
+    time: "TBD",
   },
   /*{
     title: "Tech Talk: Future of Web",
-    date: "July 15, 2024",
+    date: "July 15, 2025",
     description: "Industry experts discuss the future of web technologies",
     location: "SLIIT - Conference Hall",
     time: "2:00 PM - 4:00 PM",
@@ -30,25 +37,25 @@ const events = [
 const pastEvents = [
   {
     title: "Bashaway 2024",
-    image: "/assets/past-event-1.jpg",
+    image: "/assets/bashaway.jpg",
     description:
-      "Bashaway is a Inter-University Scripting competition organized by the SLIIT FOSS Community in collaboration with Mozilla Campus Club of SLIIT, SLIIT Women in FOSS, and Software Engineering Student Community.",
+      "The 3rd iteration of Bashaway, an Inter-University Scripting competition organized by the SLIIT FOSS Community in collaboration with Mozilla Campus Club of SLIIT, SLIIT Women in FOSS, and Software Engineering Student Community was held in October 2024.",
   },
   {
-    title: "Intro to Assemby Programming",
-    image: "/assets/past-event-2.jpg",
+    title: "Intro to Assembly Programming",
+    image: "/assets/3.png",
     description:
       "The 3rd live tech session conducted by Seniru Pasan. Dive into the world of low-level programming! Exploring the fundamentals that power your devices, demystifying how software speaks to hardware.",
   },
   {
     title: "Utilizing AntDesign for quick UI Development",
-    image: "/assets/past-event-3.jpg",
+    image: "/assets/2.png",
     description:
       "The 2nd live tech session conducted by Russell Peiris. A session focusing on frontend and building clean and neat UIs",
   },
   {
     title: "Intro to Swift & SwiftUI",
-    image: "/assets/past-event-3.jpg",
+    image: "/assets/1.png",
     description:
       "The 1st live tech session conducted by Nowen Kottage. Dive into iOS Development with the Introduction to Swift & SwiftUI: A sneak peek into UIKit!",
   },
@@ -64,7 +71,7 @@ export default function Events() {
           {events.map((event, index) => (
             <Card key={index}>
               <CardHeader>
-                <CardTitle>{event.title}</CardTitle>
+                <CardTitle className="text-orange-600 mb-4">{event.title}</CardTitle>
                 <CardDescription>{event.date}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -73,7 +80,7 @@ export default function Events() {
                   <p>📍 {event.location}</p>
                   <p>🕒 {event.time}</p>
                 </div>
-                <Button className="w-full mt-4">Register Now</Button>
+                {/* <Button className="w-full mt-4">Register Now!</Button> */}
               </CardContent>
             </Card>
           ))}

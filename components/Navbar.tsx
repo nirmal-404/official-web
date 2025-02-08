@@ -3,9 +3,12 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react" // Hamburger + close icons
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+/**
+ * Main Navbar component
+ */
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -19,9 +22,12 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Detect current path
+  // Detect current path for active link styling
   const pathname = usePathname()
   const isActive = (path: string) => pathname === path
+
+  // Toggle menu open/closed
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev)
 
   return (
     <nav
@@ -62,78 +68,96 @@ export function Navbar() {
               hover:bg-white
               hover:text-black
             "
-          >
+            onClick={() => {
+              window.open("https://bit.ly/sliitmozilla-member-registrations", "_blank")
+            }}
+            >
             Join SLIIT Mozilla!
-          </Button>
+            </Button>
         </div>
 
-        {/* --- Mobile Menu Toggle (Hamburger) --- */}
+        {/* --- Hamburger / Close Btn for Mobile --- */}
         <button
-          className="block md:hidden p-2 text-gray-700"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={toggleMenu}
+          className="block md:hidden p-2 text-gray-700 relative group"
         >
           {isMenuOpen ? (
-            <X className="w-6 h-6" />
+            // Rotates on hover when open
+            <X className="w-6 h-6 transition-transform duration-300 group-hover:rotate-180" />
           ) : (
             <Menu className="w-6 h-6" />
           )}
         </button>
       </div>
 
-      {/* --- Mobile Menu Dropdown --- */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow px-4 pb-4">
-          <div className="flex flex-col space-y-2">
-            <NavLinkMobile
-              href="/about"
-              active={isActive("/about")}
-              closeMenu={() => setIsMenuOpen(false)}
-            >
-              About
-            </NavLinkMobile>
-            <NavLinkMobile
-              href="/events"
-              active={isActive("/events")}
-              closeMenu={() => setIsMenuOpen(false)}
-            >
-              Events
-            </NavLinkMobile>
-            <NavLinkMobile
-              href="/blog"
-              active={isActive("/blog")}
-              closeMenu={() => setIsMenuOpen(false)}
-            >
-              Blog
-            </NavLinkMobile>
-            <NavLinkMobile
-              href="/contact"
-              active={isActive("/contact")}
-              closeMenu={() => setIsMenuOpen(false)}
-            >
-              Contact Us
-            </NavLinkMobile>
+      {/* 
+        Mobile Drawer:
+          - Always rendered but slides off-screen if not open
+          - Use translate-x-full to hide, translate-x-0 to show
+       */}
+      <div
+        className={`
+          md:hidden
+          absolute right-0 top-16 w-64 bg-white shadow-lg border-l p-6
+          transition-transform duration-300 ease-in-out transform
+          ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
+        `}
+      >
+        <div className="flex flex-col space-y-4 text-left">
+          <NavLinkMobile
+            href="/about"
+            active={isActive("/about")}
+            closeMenu={toggleMenu}
+          >
+            About
+          </NavLinkMobile>
+          <NavLinkMobile
+            href="/events"
+            active={isActive("/events")}
+            closeMenu={toggleMenu}
+          >
+            Events
+          </NavLinkMobile>
+          <NavLinkMobile
+            href="/blog"
+            active={isActive("/blog")}
+            closeMenu={toggleMenu}
+          >
+            Blog
+          </NavLinkMobile>
+          <NavLinkMobile
+            href="/contact"
+            active={isActive("/contact")}
+            closeMenu={toggleMenu}
+          >
+            Contact Us
+          </NavLinkMobile>
 
-            <Button
-              className="
-                w-full
-                border border-transparent
-                transition-colors duration-300
-                hover:border-black
-                hover:bg-white
-                hover:text-black
-              "
-            >
-              Join SLIIT Mozilla!
-            </Button>
-          </div>
+          <hr />
+          <Button
+            className="
+              w-full
+              border border-transparent
+              transition-colors duration-300
+              hover:border-black
+              hover:bg-white
+              hover:text-black
+            "
+            onClick={() => {
+              window.open("https://bit.ly/sliitmozilla-member-registrations", "_blank")
+            }}
+          >
+            Join SLIIT Mozilla!
+          </Button>
+          <hr />
         </div>
-      )}
+      </div>
     </nav>
   )
 }
 
 /**
- * Desktop Link with underline hover
+ * Desktop NavLink with underline hover
  */
 function NavLink({
   href,
@@ -169,8 +193,7 @@ function NavLink({
 }
 
 /**
- * Mobile Link with close on click
- * (Similar underline hover, but optionally simpler or changed for mobile)
+ * Mobile NavLink (closes menu on click)
  */
 function NavLinkMobile({
   href,

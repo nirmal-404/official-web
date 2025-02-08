@@ -116,11 +116,11 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-gray-600">mozilla@sliit.lk</p>
+                <p className="text-gray-600">infosliitmcc@gmail.com</p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Social Media</h3>
-                <p className="text-gray-600">Follow us on social media for updates</p>
+                <h3 className="font-semibold mb-2">Contact</h3>
+                <p className="text-gray-600">President: Sayuru Bopitiya (076 852 5475)</p>
               </div>
             </CardContent>
           </Card>
