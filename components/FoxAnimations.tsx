@@ -17,11 +17,11 @@ import React, { useEffect, useState } from "react"
 const scenes = [
   { type: "running-fox", direction: "rtl", duration: 6000 },
   { type: "none", duration: 3000 },
-  { type: "jumping-fox", position: "left", duration: 6000 },
+  { type: "jumping-fox", position: "left", duration: 8000 },
   { type: "none", duration: 3000 },
   { type: "running-fox", direction: "ltr", duration: 6000 },
   { type: "none", duration: 3000 },
-  { type: "jumping-fox", position: "right", duration: 6000 },
+  { type: "jumping-fox", position: "right", duration: 8000 },
   { type: "none", duration: 3000 },
 ]
 
@@ -143,14 +143,14 @@ export function FoxAnimations() {
           position: fixed;
           left: 2rem;
           bottom: 0;
-          animation: fox-jump-fade 6s ease-in-out forwards;
+          animation: fox-jump-fade 8s ease-in-out forwards;
         }
 
         .fox-jump-right {
           position: fixed;
           right: 2rem;
           bottom: 0;
-          animation: fox-jump-fade 6s ease-in-out forwards;
+          animation: fox-jump-fade 8s ease-in-out forwards;
         }
 
         /* Larger sizes */
