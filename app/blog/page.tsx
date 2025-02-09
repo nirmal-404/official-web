@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 
-export const blogPosts = [
+const blogPosts = [
   {
     id: "1",
     title: "Java and it’s benefits compared to other programming languages",
