@@ -35,7 +35,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card>
             <CardHeader>
-              <CardTitle>Get in Touch</CardTitle>
+              <CardTitle className="text-orange-600">Get in Touch</CardTitle>
               <CardDescription>
                 Have questions? We'd love to hear from you.
               </CardDescription>
@@ -100,7 +100,7 @@ export default function Contact() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Contact Information</CardTitle>
+              <CardTitle className="text-orange-600">Contact Information</CardTitle>
               <CardDescription>
                 Other ways to reach us
               </CardDescription>
@@ -119,7 +119,7 @@ export default function Contact() {
                 <p className="text-gray-600">infosliitmcc@gmail.com</p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Contact</h3>
+                <h3 className="font-semibold mb-2">Contact Numbers</h3>
                 <p className="text-gray-600">President: Sayuru Bopitiya (076 852 5475)</p>
               </div>
             </CardContent>

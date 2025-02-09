@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "2",
-    title: "CYBERWARFARE: HOW DOES IT IMPACT EVERYDAY LIFE?",
+    title: "Cyberwarfare: How does it impact everyday life?",
     excerpt: "Unlike traditional warfare where battles take place on a geographical plane, Cyberwarfare poses a significant threat on the digital realm.",
     content: "Simply defined, Cyberwarfare is the use of technology to penetrate and attack other nations’ computer systems and networks in an effort to cause damage or disrupt services. In today’s interconnected global society and with the advancements in technology, cyber warfare has sparked profound changes on how societies and its individuals function in their day-to-day lives. This article explores how cyberwarfare extends beyond traditional battlefields to have a lasting impact on many spheres of influence in everyday life."+
               "INTRODUCTION:"+
@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
     author: "Thisak Gunasekara",
     date: "2024-07-17",
     tags: ["Cybersecurity", "Cyberwarfare"],
-    imageUrl: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80&w=1000",
+    imageUrl: "/assets/blog3.png",
   },
   {
     id: "3",
@@ -63,6 +63,6 @@ export const blogPosts: BlogPost[] = [
     author: "Charuka Wanigasinghe",
     date: "2024-07-17",
     tags: ["Java", "Tech", "Programming"],
-    imageUrl: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80&w=1000",
+    imageUrl: "/assets/blog1.png",
   },
 ]

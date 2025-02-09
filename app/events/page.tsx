@@ -103,12 +103,30 @@ export default function Events() {
                 />
                 {/* Event Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{pastEvent.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-orange-600">{pastEvent.title}</h3>
                   <p className="text-gray-600">{pastEvent.description}</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="mt-8 text-center">
+          <a
+            href="https://www.youtube.com/@sliitmozilla"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block font-medium text-primary group no-underline 
+                 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[1px] after:bg-current 
+                 after:w-0 after:transition-[width] after:duration-300 hover:after:w-full"
+          >
+            Check out our past live sessions on YouTube!
+            <span
+              className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
         </div>
       </div>
     </div>
