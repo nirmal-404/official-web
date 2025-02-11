@@ -1,11 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { ExternalLink, Youtube } from "lucide-react"
 
 // upcoming events
 const events = [
   {
     title: "Code N' Coffee Podcast",
     date: "Ongoing LIVE on YouTube",
+    url: "https://www.youtube.com/watch?v=6-IQhqESj8E&list=PLkWgPcG-GFhB3sSAf7dzUs_F3dQ19ihXR&index=1",
     description: "Code N' Coffee, is a series of byte-sized tech content aimed at Computer Science students presented to you by The Mozilla Campus Club of SLIIT. Don't miss out on the Tech insights and the latest of the tech and privacy world.",
     location: "Youtube - @sliitmozilla",
     time: "Every Week",
@@ -38,30 +40,56 @@ const pastEvents = [
   {
     title: "Bashaway 2024",
     image: "/assets/bashaway.jpg",
+    url: "https://www.facebook.com/share/p/1BGnzvHnXn/?mibextid=oFDknk",
+    url_label: "Check out the gallery!",
     description:
       "The 3rd iteration of Bashaway, an Inter-University Scripting competition organized by the SLIIT FOSS Community in collaboration with Mozilla Campus Club of SLIIT, SLIIT Women in FOSS, and Software Engineering Student Community was held in October 2024.",
   },
   {
     title: "Intro to Assembly Programming",
     image: "/assets/3.png",
+    url: "https://www.youtube.com/watch?v=p3pAHNgymXA",
     description:
       "The 3rd live tech session conducted by Seniru Pasan. Dive into the world of low-level programming! Exploring the fundamentals that power your devices, demystifying how software speaks to hardware.",
   },
   {
     title: "Utilizing AntDesign for quick UI Development",
     image: "/assets/2.png",
+    url: "https://www.youtube.com/watch?v=qfFaOkHoRVM",
     description:
       "The 2nd live tech session conducted by Russell Peiris. A session focusing on frontend and building clean and neat UIs",
   },
   {
     title: "Intro to Swift & SwiftUI",
     image: "/assets/1.png",
+    url: "https://www.youtube.com/watch?v=QZinHA1r4w0",
     description:
       "The 1st live tech session conducted by Nowen Kottage. Dive into iOS Development with the Introduction to Swift & SwiftUI: A sneak peek into UIKit!",
   },
 ]
 
 export default function Events() {
+
+  const getEventLinkText = (url?: string, label?: string) => {
+    if (!url) return
+    const icon = url.includes("youtube.com") ?
+      <Youtube className="mr-1" />
+      : <ExternalLink className="mr-1" />
+    const labelText = label || (url.includes("youtube.com") ? "Watch the session!" : "Check out!")
+
+    return (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex mt-3"
+      >
+        {icon}
+        {labelText}
+      </a>
+    )
+  }
+
   return (
     <div className="py-12">
       <div className="container mx-auto px-4">
@@ -79,6 +107,7 @@ export default function Events() {
                 <div className="space-y-2 text-sm text-gray-500">
                   <p>📍 {event.location}</p>
                   <p>🕒 {event.time}</p>
+                  {getEventLinkText(event.url)}
                 </div>
                 {/* <Button className="w-full mt-4">Register Now!</Button> */}
               </CardContent>
@@ -105,6 +134,7 @@ export default function Events() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-orange-600">{pastEvent.title}</h3>
                   <p className="text-gray-600">{pastEvent.description}</p>
+                  {getEventLinkText(pastEvent.url, pastEvent.url_label)}
                 </div>
               </div>
             ))}
