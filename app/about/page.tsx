@@ -9,7 +9,9 @@ export default function About() {
           </span>
         </h1>
         
+        {/* Vision and Mission Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+          {/* Vision */}
           <div className="p-8 border border-orange-500 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
             <h2 className="text-2xl font-bold mb-6 text-center">Vision</h2>
             <div className="relative">
@@ -22,6 +24,7 @@ export default function About() {
             </div>
           </div>
 
+          {/* Mission */}
           <div className="p-8 border border-orange-500 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
             <h2 className="text-2xl font-bold mb-6 text-center">Mission</h2>
             <div className="relative">
@@ -35,6 +38,7 @@ export default function About() {
           </div>
         </div>
 
+        {/* Strategy Section */}
         <section className="mb-20">
           <h2 className="text-2xl font-bold text-center mb-12 relative">
             <span className="relative inline-block">
@@ -43,49 +47,41 @@ export default function About() {
             </span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="
-                bg-white p-6 rounded-lg shadow-sm 
-                transition-all duration-300 
-                hover:bg-orange-50 hover:shadow-md 
-                cursor-pointer
-              "
-            >
+            {/* Education */}
+            <div className="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md cursor-pointer">
               <div className="text-center">
                 <h3 className="font-semibold mb-4">Education</h3>
                 <div className="w-12 h-1 bg-orange-500 mx-auto mb-4"></div>
-                <p className="text-gray-600">Regular workshops, seminars, and hands-on sessions on various technologies</p>
+                <p className="text-gray-600">
+                  Regular workshops, seminars, and hands-on sessions on various technologies
+                </p>
               </div>
             </div>
-            <div className="
-                bg-white p-6 rounded-lg shadow-sm 
-                transition-all duration-300 
-                hover:bg-orange-50 hover:shadow-md 
-                cursor-pointer
-              "
-            >
+            {/* Community Building */}
+            <div className="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md cursor-pointer">
               <div className="text-center">
                 <h3 className="font-semibold mb-4">Community Building</h3>
                 <div className="w-12 h-1 bg-orange-500 mx-auto mb-4"></div>
-                <p className="text-gray-600">Creating opportunities for networking and collaboration within our tech community</p>
+                <p className="text-gray-600">
+                  Creating opportunities for networking and collaboration within our tech community
+                </p>
               </div>
             </div>
-            <div className="
-                bg-white p-6 rounded-lg shadow-sm 
-                transition-all duration-300 
-                hover:bg-orange-50 hover:shadow-md 
-                cursor-pointer
-              "
-            >
+            {/* Project Development */}
+            <div className="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md cursor-pointer">
               <div className="text-center">
                 <h3 className="font-semibold mb-4">Project Development</h3>
                 <div className="w-12 h-1 bg-orange-500 mx-auto mb-4"></div>
-                <p className="text-gray-600">Working on real-world projects that benefit the community</p>
+                <p className="text-gray-600">
+                  Working on real-world projects that benefit the community
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="max-w-3xl mx-auto">
+        {/* Our Story Section */}
+        <section className="max-w-3xl mx-auto mb-20">
           <h2 className="text-2xl font-bold text-center mb-12 relative">
             <span className="relative inline-block">
               Our Story
@@ -93,7 +89,7 @@ export default function About() {
             </span>
           </h2>
           <div className="prose max-w-none">
-          <div className="p-8 border border-orange-500 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+            <div className="p-8 border border-orange-500 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
               <div className="relative">
                 <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-orange-500"></div>
                 <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-orange-500"></div>
@@ -106,10 +102,10 @@ export default function About() {
                 <p className="text-gray-600 mb-4 text-center leading-relaxed">
                   Our journey began with a small group of enthusiastic students who wanted to make a difference
                   in the tech community. Today, we have evolved into one of the most active tech clubs at SLIIT,
-                  organizing numerous events, workshops, and hackathons throughout the academic year. 
+                  organizing numerous events, workshops, and hackathons throughout the academic year.
                 </p>
                 <p className="text-gray-600 text-center leading-relaxed">
-                  Under the current leadership of our <b>Club President - Sayuru Bopitiya and his wonderful team</b>, We continue to grow and adapt, 
+                  Under the current leadership of our <b>Club President - Sayuru Bopitiya and his wonderful team</b>, we continue to grow and adapt, 
                   always staying true to our core values of openness, innovation, and community building. Our members have gone 
                   on to make significant contributions to various open source projects and have established successful careers in the tech industry.
                 </p>
@@ -117,7 +113,88 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* New Executive Committee Board Section */}
+        <section className="mb-20">
+          <h2 className="text-2xl font-bold text-center mb-12 relative">
+            <span className="relative inline-block">
+              Executive Committee Board
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-orange-500"></div>
+            </span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Row 1: President */}
+            <div className="md:col-span-3 flex justify-center">
+              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center w-64">
+                <img
+                  className="w-24 h-24 rounded-full mx-auto mb-4"
+                  src="https://via.placeholder.com/150"
+                  alt="President"
+                />
+                <h3 className="font-bold text-lg">John Doe</h3>
+                <p className="text-gray-600">President</p>
+              </div>
+            </div>
+            {/* Row 2: Vice President, Secretary, Treasurer */}
+            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+                src="https://via.placeholder.com/150"
+                alt="Vice President"
+              />
+              <h3 className="font-bold text-lg">Jane Smith</h3>
+              <p className="text-gray-600">Vice President</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+                src="https://via.placeholder.com/150"
+                alt="Secretary"
+              />
+              <h3 className="font-bold text-lg">Alice Johnson</h3>
+              <p className="text-gray-600">Secretary</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+                src="https://via.placeholder.com/150"
+                alt="Treasurer"
+              />
+              <h3 className="font-bold text-lg">Bob Brown</h3>
+              <p className="text-gray-600">Treasurer</p>
+            </div>
+            {/* Row 3: Dev Lead, Editor, Event Coordinator */}
+            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+                src="https://via.placeholder.com/150"
+                alt="Dev Lead"
+              />
+              <h3 className="font-bold text-lg">Charlie Green</h3>
+              <p className="text-gray-600">Dev Lead</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+                src="https://via.placeholder.com/150"
+                alt="Editor"
+              />
+              <h3 className="font-bold text-lg">Diana Blue</h3>
+              <p className="text-gray-600">Editor</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+                src="https://via.placeholder.com/150"
+                alt="Event Coordinator"
+              />
+              <h3 className="font-bold text-lg">Ethan Black</h3>
+              <p className="text-gray-600">Event Coordinator</p>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
-  )
+  );
 }
