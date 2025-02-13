@@ -1,13 +1,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Youtube } from "lucide-react"
+import { ExternalLink, Youtube, MicVocal, LucideIcon } from "lucide-react"
+
 
 // upcoming events
 const events = [
   {
     title: "Code N' Coffee Podcast",
     date: "Ongoing LIVE on YouTube",
-    url: "https://www.youtube.com/watch?v=6-IQhqESj8E&list=PLkWgPcG-GFhB3sSAf7dzUs_F3dQ19ihXR&index=1",
+    url: "https://youtube.com/playlist?list=PLkWgPcG-GFhB3sSAf7dzUs_F3dQ19ihXR&si=aGi9UGwc3KmNcIHT",
+    urlLabel: "Catch the podcast!",
+    urlIcon: MicVocal,
     description: "Code N' Coffee, is a series of byte-sized tech content aimed at Computer Science students presented to you by The Mozilla Campus Club of SLIIT. Don't miss out on the Tech insights and the latest of the tech and privacy world.",
     location: "Youtube - @sliitmozilla",
     time: "Every Week",
@@ -41,7 +44,7 @@ const pastEvents = [
     title: "Bashaway 2024",
     image: "/assets/bashaway.jpg",
     url: "https://www.facebook.com/share/p/1BGnzvHnXn/?mibextid=oFDknk",
-    url_label: "Check out the gallery!",
+    urlLabel: "Check out the gallery!",
     description:
       "The 3rd iteration of Bashaway, an Inter-University Scripting competition organized by the SLIIT FOSS Community in collaboration with Mozilla Campus Club of SLIIT, SLIIT Women in FOSS, and Software Engineering Student Community was held in October 2024.",
   },
@@ -70,11 +73,14 @@ const pastEvents = [
 
 export default function Events() {
 
-  const getEventLinkText = (url?: string, label?: string) => {
-    if (!url) return
-    const icon = url.includes("youtube.com") ?
-      <Youtube className="mr-1" />
-      : <ExternalLink className="mr-1" />
+  const getEventLinkText = (url?: string, label?: string, UrlIcon?: LucideIcon) => {
+    if (!url) return null
+    const icon = UrlIcon 
+      ? <UrlIcon className="mr-1" />
+      : url.includes("youtube.com")
+        ? <Youtube className="mr-1" /> 
+        : <ExternalLink className="mr-1" />
+
     const labelText = label || (url.includes("youtube.com") ? "Watch the session!" : "Check out!")
 
     return (
@@ -107,7 +113,7 @@ export default function Events() {
                 <div className="space-y-2 text-sm text-gray-500">
                   <p>📍 {event.location}</p>
                   <p>🕒 {event.time}</p>
-                  {getEventLinkText(event.url)}
+                  {getEventLinkText(event.url, event.urlLabel, event.urlIcon)}
                 </div>
                 {/* <Button className="w-full mt-4">Register Now!</Button> */}
               </CardContent>
@@ -134,7 +140,7 @@ export default function Events() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-orange-600">{pastEvent.title}</h3>
                   <p className="text-gray-600">{pastEvent.description}</p>
-                  {getEventLinkText(pastEvent.url, pastEvent.url_label)}
+                  {getEventLinkText(pastEvent.url, pastEvent.urlLabel, pastEvent.urlIcon)}
                 </div>
               </div>
             ))}
