@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Youtube, MicVocal, LucideIcon } from "lucide-react"
+import { ExternalLink, Youtube, Mic, LucideIcon } from "lucide-react"
 
 
 // upcoming events
@@ -10,7 +10,7 @@ const events = [
     date: "Ongoing LIVE on YouTube",
     url: "https://youtube.com/playlist?list=PLkWgPcG-GFhB3sSAf7dzUs_F3dQ19ihXR&si=aGi9UGwc3KmNcIHT",
     urlLabel: "Catch the podcast!",
-    urlIcon: MicVocal,
+    urlIcon: Mic,
     description: "Code N' Coffee, is a series of byte-sized tech content aimed at Computer Science students presented to you by The Mozilla Campus Club of SLIIT. Don't miss out on the Tech insights and the latest of the tech and privacy world.",
     location: "Youtube - @sliitmozilla",
     time: "Every Week",
@@ -76,10 +76,10 @@ export default function Events() {
   const getEventLinkText = (url?: string, label?: string, UrlIcon?: LucideIcon) => {
     if (!url) return null
     const icon = UrlIcon 
-      ? <UrlIcon className="mr-1" />
+      ? <UrlIcon className="mr-1 w-4 h-4" />
       : url.includes("youtube.com")
-        ? <Youtube className="mr-1" /> 
-        : <ExternalLink className="mr-1" />
+        ? <Youtube className="mr-1 w-4 h-4" /> 
+        : <ExternalLink className="mr-1 w-4 h-4" />
 
     const labelText = label || (url.includes("youtube.com") ? "Watch the session!" : "Check out!")
 
@@ -88,7 +88,7 @@ export default function Events() {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex mt-3"
+        className="flex items-center mt-3"
       >
         {icon}
         {labelText}
