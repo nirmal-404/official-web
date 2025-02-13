@@ -128,7 +128,7 @@ export default function About() {
               <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center w-64">
                 <img
                   className="w-24 h-24 rounded-full mx-auto mb-4"
-                  src="https://via.placeholder.com/150"
+                  src="/assets/Sayuru.jpeg"
                   alt="President"
                 />
                 <h3 className="font-bold text-lg">John Doe</h3>
@@ -139,7 +139,7 @@ export default function About() {
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4"
-                src="https://via.placeholder.com/150"
+                src="/assets/Nethmi.jpeg"
                 alt="Vice President"
               />
               <h3 className="font-bold text-lg">Jane Smith</h3>
@@ -148,7 +148,7 @@ export default function About() {
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4"
-                src="https://via.placeholder.com/150"
+                src="/assets/Gethmi.jpeg"
                 alt="Secretary"
               />
               <h3 className="font-bold text-lg">Alice Johnson</h3>
@@ -157,7 +157,7 @@ export default function About() {
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4"
-                src="https://via.placeholder.com/150"
+                src="/assets/Jayadinu.jpeg"
                 alt="Treasurer"
               />
               <h3 className="font-bold text-lg">Bob Brown</h3>
@@ -167,7 +167,7 @@ export default function About() {
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4"
-                src="https://via.placeholder.com/150"
+                src="/assets/Danuja.jpeg"
                 alt="Dev Lead"
               />
               <h3 className="font-bold text-lg">Charlie Green</h3>
@@ -176,7 +176,7 @@ export default function About() {
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4"
-                src="https://via.placeholder.com/150"
+                src="/assets/Ravidu.jpeg"
                 alt="Editor"
               />
               <h3 className="font-bold text-lg">Diana Blue</h3>
@@ -185,7 +185,7 @@ export default function About() {
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4"
-                src="https://via.placeholder.com/150"
+                src="/assets/Nowen.jpeg"
                 alt="Event Coordinator"
               />
               <h3 className="font-bold text-lg">Ethan Black</h3>
