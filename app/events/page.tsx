@@ -2,9 +2,20 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Youtube, Mic, LucideIcon } from "lucide-react"
 
+type Event = {
+  title: string,
+  image: string,
+  date: string,
+  time: string,
+  location :string,
+  url: string,
+  urlLabel: string,
+  urlIcon: LucideIcon,
+  description: string
+}
 
 // upcoming events
-const events = [
+const events: Partial<Event>[] = [
   {
     title: "Code N' Coffee Podcast",
     date: "Ongoing LIVE on YouTube",
@@ -39,7 +50,7 @@ const events = [
 ]
 
 // past events data
-const pastEvents = [
+const pastEvents: Partial<Event>[] = [
   {
     title: "Bashaway 2024",
     image: "/assets/bashaway.jpg",
