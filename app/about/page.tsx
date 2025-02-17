@@ -131,7 +131,7 @@ export default function About() {
                   src="/assets/Sayuru.jpeg"
                   alt="President"
                 />
-                <h3 className="font-bold text-lg">John Doe</h3>
+                <h3 className="font-bold text-lg">Sayuru Bopitiya</h3>
                 <p className="text-gray-600">President</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function About() {
                 src="/assets/Nethmi.jpeg"
                 alt="Vice President"
               />
-              <h3 className="font-bold text-lg">Jane Smith</h3>
+              <h3 className="font-bold text-lg">Nethmi Nikeshala</h3>
               <p className="text-gray-600">Vice President</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
@@ -151,7 +151,7 @@ export default function About() {
                 src="/assets/Gethmi.jpeg"
                 alt="Secretary"
               />
-              <h3 className="font-bold text-lg">Alice Johnson</h3>
+              <h3 className="font-bold text-lg">Gethmi Rathnayaka</h3>
               <p className="text-gray-600">Secretary</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
@@ -160,7 +160,7 @@ export default function About() {
                 src="/assets/Jayadinu.jpeg"
                 alt="Treasurer"
               />
-              <h3 className="font-bold text-lg">Bob Brown</h3>
+              <h3 className="font-bold text-lg">Jayadinu Dias</h3>
               <p className="text-gray-600">Treasurer</p>
             </div>
             {/* Row 3: Dev Lead, Editor, Event Coordinator */}
@@ -170,7 +170,7 @@ export default function About() {
                 src="/assets/Danuja.jpeg"
                 alt="Dev Lead"
               />
-              <h3 className="font-bold text-lg">Charlie Green</h3>
+              <h3 className="font-bold text-lg">Danuja Jayasuriya</h3>
               <p className="text-gray-600">Dev Lead</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
@@ -179,7 +179,7 @@ export default function About() {
                 src="/assets/Ravidu.jpeg"
                 alt="Editor"
               />
-              <h3 className="font-bold text-lg">Diana Blue</h3>
+              <h3 className="font-bold text-lg">Ravindu Dilusha</h3>
               <p className="text-gray-600">Editor</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
@@ -188,7 +188,7 @@ export default function About() {
                 src="/assets/Nowen.jpeg"
                 alt="Event Coordinator"
               />
-              <h3 className="font-bold text-lg">Ethan Black</h3>
+              <h3 className="font-bold text-lg">Nowen Kottage</h3>
               <p className="text-gray-600">Event Coordinator</p>
             </div>
           </div>
