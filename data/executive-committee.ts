@@ -35,7 +35,11 @@ export const executiveCommittees: ExecutiveCommittee = {
       role: "Dev Lead",
       image: "/assets/Danuja.jpeg",
     },
-    { name: "Ravindu Dilusha", role: "Editor", image: "/assets/Ravidu.jpeg" },
+    {
+      name: "Ravindu Dilusha",
+      role: "Editor",
+      image: "/assets/Ravidu.jpeg",
+    },
     {
       name: "Nowen Kottage",
       role: "Event Coordinator",

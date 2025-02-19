@@ -14,7 +14,7 @@ const YearSelector: React.FC<YearSelectorProps> = ({
   return (
     <div className="mb-8 flex justify-center">
       <select
-        className="p-3 border border-orange-500 rounded-lg bg-white shadow-sm focus:outline-none cursor-pointer"
+        className="p-3 border-orange-500 bg-white shadow-sm focus:outline-none cursor-pointer"
         value={selectedYear}
         onChange={(e) => onChange(e.target.value)}
       >
