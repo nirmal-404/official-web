@@ -149,6 +149,7 @@ export default function About() {
             selectedYear={selectedYear}
             onChange={setSelectedYear}
           />
+          <ExecutiveCommitteeUI members={executiveCommittees[selectedYear]} />
         </section>
       </div>
     </div>
