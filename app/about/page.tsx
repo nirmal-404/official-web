@@ -124,7 +124,7 @@ export default function About() {
                 </p>
                 <p className="text-gray-600 text-center leading-relaxed">
                   Under the current leadership of our{" "}
-                  <b>Club President - Sayuru Bopitiya and his wonderful team</b>
+                  <b>Club President - Sadeesha Perera and his wonderful team</b>
                   , we continue to grow and adapt, always staying true to our
                   core values of openness, innovation, and community building.
                   Our members have gone on to make significant contributions to
