@@ -37,7 +37,7 @@ export const executiveCommittees: ExecutiveCommittee = {
     },
     {
       name: "Mohammadhu Bishru",
-      role: "Editor",
+      role: "Design Lead",
       image: "/assets/Bishru.jpg",
     },
     {
