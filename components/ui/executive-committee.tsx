@@ -12,6 +12,8 @@ const ExecutiveCommitteeUI: React.FC<ExecutiveCommitteeProps> = ({
   if (members.length === 0) return null;
 
   const [president, ...otherMembers] = members;
+  const secondRow = otherMembers.slice(0, 3)
+  const thirdRow = otherMembers.slice(3)
 
   return (
     <div className="flex flex-col gap-8">
@@ -31,9 +33,30 @@ const ExecutiveCommitteeUI: React.FC<ExecutiveCommitteeProps> = ({
         </div>
       </div>
 
-      {/* Second & Third Rows: Other Members (3 Columns) */}
+      {/* Second row (vice president, secretary and treasurer) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {otherMembers.map((member, index) => (
+        {secondRow.map((member, index) => (
+          <div
+            key={index}
+            className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div className="w-24 h-24 mx-auto mb-4 relative">
+              <Image
+                src={member.image}
+                alt={member.name}
+                fill
+                className="rounded-full object-cover"
+              />
+            </div>
+            <h3 className="font-bold text-lg">{member.name}</h3>
+            <p className="text-gray-600">{member.role}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Third row (remaining members) */}
+      <div className="grid gap-8 justify-center grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]"  >
+        {thirdRow.map((member, index) => (
           <div
             key={index}
             className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center"

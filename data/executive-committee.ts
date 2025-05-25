@@ -9,6 +9,48 @@ export interface ExecutiveCommittee {
 }
 
 export const executiveCommittees: ExecutiveCommittee = {
+  "2025/2026": [
+    {
+      name: "Sadeesha Perera",
+      role: "President",
+      image: "/assets/Sadeesha.jpg",
+    },
+    {
+      name: "Hinesha Perera",
+      role: "Vice President",
+      image: "/assets/Hinesha.jpg",
+    },
+    {
+      name: "Mohamed Asath",
+      role: "Secretary",
+      image: "/assets/Asath.jpg",
+    },
+    {
+      name: "Leena Jilain",
+      role: "Treasurer",
+      image: "/assets/Leena.png",
+    },
+    {
+      name: "Seniru Pasan",
+      role: "Dev Lead",
+      image: "/assets/Seniru.jpg",
+    },
+    {
+      name: "Mohammadhu Bishru",
+      role: "Design Lead",
+      image: "/assets/Bishru.jpg",
+    },
+    {
+      name: "Lakshi Senadheera",
+      role: "Event Coordinator",
+      image: "/assets/Lakshi.jpg",
+    },
+    {
+      name: "Dasun Wickramasooriya",
+      role: "Project Coordinator",
+      image: "/assets/Dasun.jpg",
+    }
+  ],
   "2024/2025": [
     {
       name: "Sayuru Bopitiya",
@@ -44,20 +86,6 @@ export const executiveCommittees: ExecutiveCommittee = {
       name: "Nowen Kottage",
       role: "Event Coordinator",
       image: "/assets/Nowen.jpeg",
-    },
-  ],
-  // Add more years here as much as we can it will de displayed in the about page
-  "2023/2024": [
-    {
-      name: "Old President",
-      role: "President",
-      image: "/assets/old-president.jpeg",
-    },
-    { name: "Old VP", role: "Vice President", image: "/assets/old-vp.jpeg" },
-    {
-      name: "Old Secretary",
-      role: "Secretary",
-      image: "/assets/old-secretary.jpeg",
     },
   ],
 };
