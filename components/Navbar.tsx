@@ -144,7 +144,7 @@ export function Navbar() {
               hover:text-black
             "
             onClick={() => {
-              window.open("https://bit.ly/sliitmozilla-member-registrations", "_blank")
+              window.open("https://forms.gle/1eNYuiNqd7CwbGEw6", "_blank")
             }}
           >
             Join SLIIT Mozilla!
