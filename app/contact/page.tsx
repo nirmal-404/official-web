@@ -120,7 +120,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Contact Numbers</h3>
-                <p className="text-gray-600">President: Sayuru Bopitiya (076 852 5475)</p>
+                <p className="text-gray-600">President: Sadeesha Perera (+94 77 898 2938)</p>
               </div>
             </CardContent>
           </Card>
