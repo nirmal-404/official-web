@@ -7,6 +7,7 @@ import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 
 import { FoxAnimations } from "@/components/FoxAnimations"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
