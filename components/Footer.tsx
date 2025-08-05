@@ -53,7 +53,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Follow Us on Socials!</h4>
             <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/sliitmcc" className="hover:text-primary">
+              <Link href="https://www.facebook.com/sliitmozilla" className="hover:text-primary">
                 <Facebook className="h-5 w-5" />
               </Link>
               {/* <Link href="#" className="hover:text-primary">
@@ -62,7 +62,7 @@ export function Footer() {
               <Link href="https://www.instagram.com/sliitmozilla" className="hover:text-primary">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="https://github.com/sliitmozilla" className="hover:text-primary">
+              <Link href="https://github.com/Mozilla-Campus-Club-of-SLIIT" className="hover:text-primary">
                 <Github className="h-5 w-5" />
               </Link>
               <Link href="https://www.youtube.com/@sliitmozilla" className="hover:text-primary">
