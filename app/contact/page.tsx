@@ -15,9 +15,10 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { toast } from 'sonner'
 import emailjs from '@emailjs/browser'
+import { useState } from 'react'
 
 const formSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
+  name: z.string().min(1, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
   subject: z.string().min(5, 'Subject must be at least 5 characters'),
   message: z.string().min(10, 'Message must be at least 10 characters')
@@ -28,8 +29,9 @@ export default function Contact () {
     resolver: zodResolver(formSchema)
   })
 
-  function onSubmit (values: z.infer<typeof formSchema>) {
+  const [isContactFormSubmitted, setIsContactFormSubmitted] = useState(false)
 
+  function onSubmit (values: z.infer<typeof formSchema>) {
     const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID!
     const toYouTemplateID = process.env.NEXT_PUBLIC_TO_YOU_TEMPLATE_ID!
     const autoReplyTemplateID = process.env.NEXT_PUBLIC_AUTO_REPLY_TEMPLATE_ID!
@@ -41,13 +43,21 @@ export default function Contact () {
         emailjs.send(serviceID, autoReplyTemplateID, values, publicKey)
       )
       .then(() => {
-        toast.success('Message sent successfully!')
+        toast('Email Sent')
+        console.log('success')
         form.reset()
       })
       .catch(err => {
-        toast.error('Email sending failed.')
+        toast('Something went rong')
         console.error(err)
       })
+
+    toast('Email Sent')
+    setIsContactFormSubmitted(true)
+
+    setTimeout(() => {
+      setIsContactFormSubmitted(false)
+    }, 3000)
   }
 
   return (
@@ -64,57 +74,70 @@ export default function Contact () {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className='space-y-4'
-              >
-                <div>
-                  <Input placeholder='Your Name' {...form.register('name')} />
-                  {form.formState.errors.name && (
-                    <p className='text-sm text-red-500 mt-1'>
-                      {form.formState.errors.name.message}
-                    </p>
-                  )}
-                </div>
+              {!isContactFormSubmitted ? (
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className='space-y-4'
+                >
+                  <div>
+                    <Input placeholder='Your Name' {...form.register('name')} />
+                    {form.formState.errors.name && (
+                      <p className='text-sm text-red-500 mt-1'>
+                        {form.formState.errors.name.message}
+                      </p>
+                    )}
+                  </div>
 
-                <div>
-                  <Input
-                    type='email'
-                    placeholder='Email Address'
-                    {...form.register('email')}
-                  />
-                  {form.formState.errors.email && (
-                    <p className='text-sm text-red-500 mt-1'>
-                      {form.formState.errors.email.message}
-                    </p>
-                  )}
-                </div>
+                  <div>
+                    <Input
+                      type='email'
+                      placeholder='Email Address'
+                      {...form.register('email')}
+                    />
+                    {form.formState.errors.email && (
+                      <p className='text-sm text-red-500 mt-1'>
+                        {form.formState.errors.email.message}
+                      </p>
+                    )}
+                  </div>
 
-                <div>
-                  <Input placeholder='Subject' {...form.register('subject')} />
-                  {form.formState.errors.subject && (
-                    <p className='text-sm text-red-500 mt-1'>
-                      {form.formState.errors.subject.message}
-                    </p>
-                  )}
-                </div>
+                  <div>
+                    <Input
+                      placeholder='Subject'
+                      {...form.register('subject')}
+                    />
+                    {form.formState.errors.subject && (
+                      <p className='text-sm text-red-500 mt-1'>
+                        {form.formState.errors.subject.message}
+                      </p>
+                    )}
+                  </div>
 
-                <div>
-                  <Textarea
-                    placeholder='Your Message'
-                    {...form.register('message')}
-                  />
-                  {form.formState.errors.message && (
-                    <p className='text-sm text-red-500 mt-1'>
-                      {form.formState.errors.message.message}
-                    </p>
-                  )}
-                </div>
+                  <div>
+                    <Textarea
+                      placeholder='Your Message'
+                      {...form.register('message')}
+                    />
+                    {form.formState.errors.message && (
+                      <p className='text-sm text-red-500 mt-1'>
+                        {form.formState.errors.message.message}
+                      </p>
+                    )}
+                  </div>
 
-                <Button type='submit' className='w-full'>
-                  Send Message
-                </Button>
-              </form>
+                  <Button type='submit' className='w-full'>
+                    Send Message
+                  </Button>
+                </form>
+              ) : (
+                <div className='bg-orange-100 text-orange-700 p-4 rounded'>
+                  <p className='font-semibold'>Message Sent!</p>
+                  <p>
+                    Thank you for reaching out. I'll get back to you as soon as
+                    possible.
+                  </p>
+                </div>
+              )}
             </CardContent>
           </Card>
 

@@ -9,6 +9,8 @@ import { Footer } from "@/components/Footer"
 import { FoxAnimations } from "@/components/FoxAnimations"
 import { Analytics } from "@vercel/analytics/next"
 
+import { Toaster } from "@/components/ui/sonner"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -26,6 +28,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <div className="min-h-screen flex flex-col overflow-x-hidden">
           <Navbar />
+            <Toaster />
           <SplashScreen>
             <FoxAnimations />
             <main className="flex-1">
