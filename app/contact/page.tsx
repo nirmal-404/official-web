@@ -43,8 +43,7 @@ export default function Contact () {
         emailjs.send(serviceID, autoReplyTemplateID, values, publicKey)
       )
       .then(() => {
-        toast('Email Sent')
-        console.log('success')
+        // toast('Email Sent')
         form.reset()
       })
       .catch(err => {
