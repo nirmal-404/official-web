@@ -18,7 +18,7 @@ import emailjs from '@emailjs/browser'
 import { useState } from 'react'
 
 const formSchema = z.object({
-  name: z.string().min(1, 'Name must be at least 2 characters'),
+  name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
   subject: z.string().min(5, 'Subject must be at least 5 characters'),
   message: z.string().min(10, 'Message must be at least 10 characters')
@@ -51,7 +51,6 @@ export default function Contact () {
         toast('Something went rong')
         console.error(err)
       })
-
     toast('Email Sent')
     setIsContactFormSubmitted(true)
 
@@ -133,7 +132,7 @@ export default function Contact () {
                 <div className='bg-orange-100 text-orange-700 p-4 rounded'>
                   <p className='font-semibold'>Message Sent!</p>
                   <p>
-                    Thank you for reaching out. I'll get back to you as soon as
+                    Thank you for reaching out. We'll get back to you as soon as
                     possible.
                   </p>
                 </div>
