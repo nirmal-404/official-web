@@ -47,7 +47,7 @@ export default function Contact () {
         form.reset()
       })
       .catch(err => {
-        toast('Something went rong')
+        toast('Something went wrong')
         console.error(err)
       })
     toast('Email Sent')
